@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 import { Navigate, useNavigate, Link } from 'react-router-dom';
+import Header from './Header';
 
 
 export const Notes = () => {
@@ -56,8 +57,9 @@ export const Notes = () => {
     }
 
   return (
-    <div className='px-12 py-10 flex justify-center mt-16 space-x-16'>
-        <div className='flex flex-col w-[450px]'>
+    <div className='py-10 flex justify-center mt-16 space-x-16'>
+        <Header />
+        <div className='flex flex-col w-[400px]'>
             <form onSubmit={search} className='flex'>
               <input onChange={search} type='text' placeholder='Search your notes...' name='search' className='border border-black p-1'/>
               <button className='ml-2 bg-blue-500 text-white px-2 py-1 border border-black' ty1 border border-blacke='submit'>Search</button>
@@ -86,7 +88,7 @@ export const Notes = () => {
             })}
             <Link to='/create' className='border border-black px-2 py-1 bg-blue-500 text-white mx-auto mt-5'>Add a new note</Link>
         </div>
-        <div className='w-[500px]'>
+        <div className='w-[400px]'>
             { (singleNote) ? singleNote.map(note => {
                 return (
                     <div className='flex flex-col'>
@@ -100,6 +102,7 @@ export const Notes = () => {
                 )
             }) : null}
         </div>
+        <div className="fixed bottom-0 text-red-400 mb-5 text-center w-full">© 2023 NoteBook</div>
     </div>
   )
 }

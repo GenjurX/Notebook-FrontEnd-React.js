@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import Header from './Header';
 
 const Create = () => {
 
@@ -24,8 +25,9 @@ const Create = () => {
         }
     } 
   return (
-    <div className='px-12 py-12'>
-        <Link to='/' className='border border-black px-2 py-1 bg-blue-500 text-white mx-auto mt-5'>Go back</Link>
+    <div className='px-12 py-20'>
+        <Header />
+        <Link to='/' className='border border-black px-2 py-1 bg-blue-500 text-white mx-auto'>Go back</Link>
         <form onSubmit={onSubmit} className='flex flex-col mx-auto w-[500px] border border-black p-5 gap-y-2 bg-blue-300'>
             <label className='mx-auto font-bold'>Title</label>
             <input className='border border-black p-1' type='text' name='title' required />
@@ -37,6 +39,7 @@ const Create = () => {
             <textarea className='border border-black p-1' name='description' rows="10" cols="50" required/>
             <button className='border border-black px-2 py-1 bg-blue-500 text-white mx-auto mt-5' type='submit'>Submit</button>
         </form>
+        <div className="fixed bottom-0 text-red-400 mb-5 text-center w-full">© 2023 NoteBook</div>
     </div>
   )
 }
