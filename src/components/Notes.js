@@ -59,7 +59,7 @@ export const Notes = () => {
   return (
     <div className='py-10 flex justify-center mt-16 space-x-16'>
         <Header />
-        <div className='flex flex-col w-[400px]'>
+        <div className='flex flex-col w-[450px]'>
             <form onSubmit={search} className='flex'>
               <input onChange={search} type='text' placeholder='Search your notes...' name='search' className='border border-black p-1'/>
               <button className='ml-2 bg-blue-500 text-white px-2 py-1 border border-black' ty1 border border-blacke='submit'>Search</button>
@@ -88,7 +88,7 @@ export const Notes = () => {
             })}
             <Link to='/create' className='border border-black px-2 py-1 bg-blue-500 text-white mx-auto mt-5'>Add a new note</Link>
         </div>
-        <div className='w-[400px]'>
+        <div className='w-[500px]'>
             { (singleNote) ? singleNote.map(note => {
                 return (
                     <div className='flex flex-col'>
