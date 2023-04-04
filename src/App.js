@@ -10,11 +10,11 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path = '/' element = {<Notes />}> </Route>
-        <Route path = '/create' element = {<Create />}> </Route>
-        <Route path = '/update' element = {<Update />}> </Route>
+        <Route path='/Notebook-FrontEnd-React.js/' element={<Notes />}> </Route>
+        <Route path='/Notebook-FrontEnd-React.js/create' element={<Create />}> </Route>
+        <Route path='/Notebook-FrontEnd-React.js//update' element={<Update />}> </Route>
       </Routes>
-  </BrowserRouter>
+    </BrowserRouter>
   );
 }
 
